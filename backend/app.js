@@ -7,8 +7,9 @@ const sauceRoutes = require('./routes/sauce');
 const path = require('path');
 
 const app = express();
+
 // BDD Mongoose
-mongoose.connect('mongodb+srv://lahcen:Lahcen71@cluster0.vihry.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+mongoose.connect("mongodb+srv://jsuser:UQ7UZqhYdAuSDAQj@cluster0.vihry.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
 { useNewUrlParser: true,
   useUnifiedTopology: true })
   .then(() => console.log('Connexion à MongoDB réussie !'))
