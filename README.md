@@ -15,6 +15,7 @@ Retirez le code de l'application front-end du repository du projet et suivez les
 étapes suivantes :
 - Clonez le repository
 - A l'invite de commande/PowerShell
-- Exécutez npm install à partir du répertoire du projet
+- Exécutez npm install à partir du répertoire front-end du projet
 - Exécutez npm start
-- Exécutez le back-end sur http://localhost:3000 seulement
+- Pour l'exécution du back-end sur http://localhost:3000 : 
+- Exécutez npm install puis nodemon server
