@@ -1,5 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const dotenv = require("dotenv");
+dotenv.config();
 
 const userRoutes = require('./routes/user');
 const sauceRoutes = require('./routes/sauce');
@@ -9,7 +11,7 @@ const path = require('path');
 const app = express();
 
 // BDD Mongoose
-mongoose.connect("mongodb+srv://jsuser:UQ7UZqhYdAuSDAQj@cluster0.vihry.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+mongoose.connect(process.env.MONGO_DB,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true
