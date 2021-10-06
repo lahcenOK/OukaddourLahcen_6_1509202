@@ -1,6 +1,6 @@
 // verification inscription utilisateur
 module.exports = (req,res,next) => {
-    
+//Regex 
   const regexemail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   const regexpassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,15}$/;
 

@@ -1,6 +1,7 @@
-// Schema données sauce
+// Base de données Mongoose
 const mongoose = require('mongoose');
 
+// Schema données sauce
 const sauceSchema = mongoose.Schema({
   userId: { type: String, required: true },
   name: { type: String, required: true },

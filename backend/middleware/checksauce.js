@@ -1,4 +1,3 @@
-
 //vérification de l'ajout d'une nouvelle sauce
 
 module.exports = (req, res, next) => {
@@ -13,7 +12,7 @@ module.exports = (req, res, next) => {
     if (!regexnam.test(sauceObject.name) || !regexnam.test(sauceObject.manufacturer) ||
        !regexdescription.test(sauceObject.description) || !regexnam.test(sauceObject.mainPepper) ||
         !regexheat.test(sauceObject.heat)) {
-            return res.status(500).json({ error: 'les caractères saisies est inferieur à trois dans certains champs !' });
+            return res.status(500).json({ error: 'la  saisie des champs doit être supérieur à trois caractères!' });
         }else {
             next();
         }

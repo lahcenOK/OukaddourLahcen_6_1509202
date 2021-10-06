@@ -1,5 +1,7 @@
+//Package jsonwebtoke de vérivification des tokens
 const jwt = require('jsonwebtoken');
 
+// Création du token d'authentification
 module.exports = (req, res, next) => {
   try {
     const token = req.headers.authorization.split(' ')[1];
