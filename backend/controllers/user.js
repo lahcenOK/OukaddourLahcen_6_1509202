@@ -10,7 +10,7 @@ const User = require('../models/User');
 // Créer un compter utlisateur
 exports.signup = (req, res, next) => {
   // Chiffrement de l'email 
-  const cryptemail = cryptojs.HmacSHA512(req.body.email, 'TOKEN_SECRET').toString(cryptojs.enc.Base64);
+  const cryptemail = cryptojs.HmacSHA512(req.body.email, process.env.TOKENMAIL).toString(cryptojs.enc.Base64);
   bcrypt.hash(req.body.password, 10)//Hachage du mot de passe
     .then(hash => {
       const user = new User({
@@ -27,7 +27,7 @@ exports.signup = (req, res, next) => {
 // Connecter à un compte utilisateur
 exports.login = (req, res, next) => {
   // Chiffrement de l'email afin de le comparer avec la base de donnée
-  const cryptemail = cryptojs.HmacSHA512(req.body.email, 'TOKEN_SECRET').toString(cryptojs.enc.Base64);
+  const cryptemail = cryptojs.HmacSHA512(req.body.email, process.env.TOKENMAIL).toString(cryptojs.enc.Base64);
   User.findOne({ email: cryptemail })
     .then(user => {
       if (!user) {
